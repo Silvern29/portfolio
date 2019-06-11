@@ -25,9 +25,9 @@
 
 <!-- Add your site or application content here -->
   <header>
-    <video autoplay muted loop class="bg__video">
+    <!-- <video autoplay muted loop class="bg__video">
       <source src="test.mp4" type="video/mp4">
-    </video>
+    </video> -->
     <h1>Florian Redlinghaus</h1>
   </header>
 
@@ -79,6 +79,40 @@
   </footer>
 
 
+
+
+  <script src="js/pixi.min.js"></script>
+  <script>
+    var app;
+    function initPixi() {
+      app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+      document.body.appendChild(app.view);
+
+      var image = new PIXI.Sprite.from("img/_DSC3211-Bearbeitet.jpg");
+      image.width = window.innerWidth;
+      image.height = window.innerHeight;
+      app.stage.addChild(image);
+
+      displacementSprite = new PIXI.Sprite.from("img/clouds.jpg");
+      displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+      displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+      app.stage.addChild(displacementSprite);
+      app.stage.filters = [displacementFilter];
+
+      app.renderer.view.style.transform = 'scale(1.02)';
+      displacementSprite.scale.x = 4;
+      displacementSprite.scale.y = 4;
+
+      animate();
+    }
+
+    function animate() {
+      displacementSprite.x += 8;
+      displacementSprite.y += 3;
+      requestAnimationFrame(animate);
+    }
+    initPixi();
+  </script>
 
 
 

@@ -44,15 +44,16 @@ html {
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 
-  .bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: auto;
-    z-index: -100;
-  }
+  //.bg__video {
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  min-width: 100%;
+  //  height: auto;
+  //  z-index: -100;
+  //}
 
   h1{
     position: absolute;
@@ -143,6 +144,15 @@ body {
     right: 115px;
     text-align: right;
     color: white;
+  }
+
+  canvas {
+    position: absolute;
+    //top: 0;
+    //left: 0;
+    //min-width: 100%;
+    //height: auto;
+    z-index: -200;
   }
 }
 

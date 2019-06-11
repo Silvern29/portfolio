@@ -42,14 +42,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-}
-body .bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: auto;
-  z-index: -100;
+  overflow: hidden;
 }
 body h1 {
   position: absolute;
@@ -122,6 +115,10 @@ body footer {
   right: 115px;
   text-align: right;
   color: white;
+}
+body canvas {
+  position: absolute;
+  z-index: -200;
 }
 
 @media screen and (min-width: 840px) {
