@@ -1,4 +1,5 @@
 /* latin */
+@import url("https://fonts.googleapis.com/css?family=Inika:400,700|Zilla+Slab:400,700&display=swap");
 @font-face {
   font-family: "Montserrat";
   font-style: italic;
@@ -101,11 +102,10 @@ body main .panel .back a {
   font-size: 25px;
   font-weight: bold;
 }
-body main .panel .front h2 {
+body main .panel .front {
   text-transform: uppercase;
   color: white;
   font-size: 30px;
-  font-weight: bold;
 }
 body main .panel:hover {
   -webkit-transform: rotateX(180deg);
@@ -120,26 +120,29 @@ body main .panel:hover {
   transition: 1s;
 }
 body .code .front {
-  background-color: cornflowerblue;
+  background: rgba(47, 181, 255, 0.81);
+  font-family: "Inika";
 }
 body .photo .front {
-  background-color: yellowgreen;
+  background: rgba(0, 255, 109, 0.81);
 }
 body .about .front {
-  background-color: gray;
+  background: rgba(142, 139, 144, 0.81);
 }
 body .back {
-  background-color: darkgrey;
+  background-color: rgba(62, 59, 64, 0.81);
 }
 body footer {
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   right: 115px;
   text-align: right;
   color: white;
 }
 body canvas {
   position: absolute;
+  min-width: 100%;
+  height: auto;
   z-index: -200;
 }
 
