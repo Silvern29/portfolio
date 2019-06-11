@@ -60,13 +60,17 @@ body main {
   margin: auto;
   width: 50%;
   height: 750px;
-  perspective: 2000px;
   -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
 }
 body main .panel {
   height: 250px;
-  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 body main .panel .front, body main .panel .back {
   display: flex;
@@ -74,10 +78,17 @@ body main .panel .front, body main .panel .back {
   align-items: center;
   height: 100%;
   width: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 body main .panel .back {
   position: relative;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
   bottom: 250px;
   display: grid;
@@ -97,17 +108,28 @@ body main .panel .front h2 {
   font-weight: bold;
 }
 body main .panel:hover {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
-body .code .back, body .code .front {
+body .code .front {
   background-color: cornflowerblue;
 }
-body .photo .back, body .photo .front {
+body .photo .front {
   background-color: yellowgreen;
 }
-body .about .back, body .about .front {
+body .about .front {
   background-color: gray;
+}
+body .back {
+  background-color: darkgrey;
 }
 body footer {
   position: absolute;

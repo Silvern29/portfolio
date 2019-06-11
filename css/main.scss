@@ -72,13 +72,17 @@ body {
     margin: auto;
     width: 50%;
     height: 750px;
-    perspective: 2000px;
     -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    perspective: 2000px;
 
     .panel {
       height: 250px;
-      transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
 
       .front,.back {
         display: flex;
@@ -86,11 +90,18 @@ body {
         align-items: center;
         height: 100%;
         width: 100%;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
         backface-visibility: hidden;
       }
 
       .back {
         position: relative;
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
         transform: rotateX(180deg);
         bottom: 250px;
         display: grid;
@@ -115,27 +126,39 @@ body {
     }
 
     .panel:hover {
+      -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      -o-transform: rotateX(180deg);
       transform: rotateX(180deg);
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
       transition: 1s;
     }
   }
 
   .code {
-    .back, .front {
+    .front {
       background-color: cornflowerblue;
     }
   }
 
   .photo {
-    .back, .front {
+    .front {
       background-color: yellowgreen;
     }
   }
 
   .about {
-    .back, .front {
+    .front {
       background-color: gray;
     }
+  }
+
+  .back {
+    background-color: darkgrey;
   }
 
   footer {
