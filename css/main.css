@@ -37,28 +37,28 @@
 }
 html {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: #2a8888;
 }
 
 body {
   padding: 0;
   margin: 0;
 }
-body h1 {
-  position: absolute;
-  top: 15px;
-  left: 115px;
-  padding-right: 100px;
+body header h1 {
+  position: relative;
+  text-align: center;
   color: white;
+  margin-top: 3%;
 }
 body main {
-  position: absolute;
-  top: 50px;
+  position: relative;
+  margin: auto;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
-  width: 50%;
-  height: 750px;
+  width: 100%;
+  min-height: 100%;
   -webkit-perspective: 2000px;
   -moz-perspective: 2000px;
   -ms-perspective: 2000px;
@@ -93,6 +93,10 @@ body main .panel .back {
   display: grid;
   grid-template-columns: auto;
   text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 body main .panel .back a {
   text-transform: uppercase;
@@ -101,6 +105,7 @@ body main .panel .back a {
   font-weight: bold;
 }
 body main .panel .front {
+  font-family: "Inika", sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 30px;
@@ -114,19 +119,15 @@ body main .panel:hover {
   -ms-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  -webkit-backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 body .code .front {
   background: rgba(47, 181, 255, 0.81);
-  font-family: "Inika";
 }
 body .photo .front {
   background: rgba(0, 255, 109, 0.81);
@@ -138,33 +139,46 @@ body .back {
   background-color: rgba(62, 59, 64, 0.81);
 }
 body footer {
-  position: absolute;
-  bottom: 20px;
-  right: 115px;
-  text-align: right;
+  position: relative;
+  text-align: center;
   color: white;
 }
 body canvas {
   position: absolute;
-  min-width: 100%;
-  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
   z-index: -200;
 }
 
 @media screen and (min-width: 840px) {
-  .container {
+  html {
+    overflow: hidden;
+  }
+  html body header h1 {
+    left: 115px;
+    text-align: left;
+  }
+  html body .container {
+    width: 50%;
+    margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 2fr 1fr;
   }
-  .container .code, .container .photo {
+  html body .container .code, html body .container .photo {
     height: 500px;
   }
-  .container .code .back, .container .photo .back {
+  html body .container .code .back, html body .container .photo .back {
     bottom: 500px;
   }
-  .container .about {
+  html body .container .about {
     grid-column: span 2;
+  }
+  html body footer {
+    right: 115px;
+    text-align: right;
   }
 }
 
