@@ -49,15 +49,6 @@ body {
   padding: 0;
   margin: 0;
 
-  //.bg__video {
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  min-width: 100%;
-  //  height: auto;
-  //  z-index: -100;
-  //}
-
   header {
     h1 {
       position: relative;
@@ -119,6 +110,10 @@ body {
           color: white;
           font-size: 25px;
           font-weight: bold;
+          padding: 5px;
+          img {
+            border-radius: 5px;
+          }
         }
       }
 
@@ -191,14 +186,15 @@ body {
 @media screen and (min-width: 840px) {
   html {
     overflow: hidden;
+
     body {
       header {
         h1 {
-          //top: 15px;
           left: 115px;
           text-align: left;
         }
       }
+
       .container {
         width: 50%;
         margin: auto;
@@ -218,6 +214,7 @@ body {
           grid-column: span 2;
         }
       }
+
       footer {
         right: 115px;
         text-align: right;

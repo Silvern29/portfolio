@@ -103,6 +103,10 @@ body main .panel .back a {
   color: white;
   font-size: 25px;
   font-weight: bold;
+  padding: 5px;
+}
+body main .panel .back a img {
+  border-radius: 5px;
 }
 body main .panel .front {
   font-family: "Inika", sans-serif;
