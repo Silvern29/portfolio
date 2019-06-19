@@ -47,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80vh;
+  min-height: 80vh;
 }
 body header h1 {
   position: relative;
@@ -152,9 +152,10 @@ body .about .back {
   background-color: rgba(142, 139, 144, 0.3);
 }
 body footer {
-  position: relative;
+  position: static;
   text-align: center;
   color: white;
+  bottom: 20px;
 }
 body canvas {
   position: absolute;
@@ -169,13 +170,16 @@ body canvas {
   html {
     overflow: hidden;
   }
+  html body {
+    padding: 1%;
+  }
   html body header h1 {
     left: 115px;
     text-align: left;
   }
   html body .container {
     width: 50%;
-    margin: auto;
+    margin: 1% auto;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 2fr 1fr;
