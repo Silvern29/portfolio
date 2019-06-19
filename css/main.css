@@ -44,12 +44,15 @@ html {
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
 }
 body header h1 {
   position: relative;
   text-align: center;
   color: white;
-  margin-top: 3%;
 }
 body main {
   position: relative;
@@ -133,14 +136,20 @@ body main .panel:hover {
 body .code .front {
   background: rgba(47, 181, 255, 0.81);
 }
+body .code .back {
+  background-color: rgba(47, 181, 255, 0.3);
+}
 body .photo .front {
   background: rgba(0, 255, 109, 0.81);
+}
+body .photo .back {
+  background-color: rgba(0, 255, 109, 0.3);
 }
 body .about .front {
   background: rgba(142, 139, 144, 0.81);
 }
-body .back {
-  background-color: rgba(62, 59, 64, 0.81);
+body .about .back {
+  background-color: rgba(142, 139, 144, 0.3);
 }
 body footer {
   position: relative;
