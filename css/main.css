@@ -38,7 +38,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  background: #2a8888;
+  background-image: url("../img/blockchain-4097126_1920.png");
 }
 
 body {
@@ -53,6 +53,8 @@ body header h1 {
   position: relative;
   text-align: center;
   color: white;
+  padding: 10px;
+  background: radial-gradient(circle at center, rgba(145, 145, 145, 0.8), rgba(124, 124, 124, 0));
 }
 body main {
   position: relative;
@@ -84,6 +86,7 @@ body main .panel .front, body main .panel .back {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+  border-radius: 25px;
 }
 body main .panel .back {
   position: relative;
@@ -109,7 +112,7 @@ body main .panel .back a {
   padding: 5px;
 }
 body main .panel .back a img {
-  border-radius: 5px;
+  border-radius: 15px;
 }
 body main .panel .front {
   font-family: "Inika", sans-serif;
@@ -134,28 +137,30 @@ body main .panel:hover {
   -moz-backface-visibility: hidden;
 }
 body .code .front {
-  background: rgba(47, 181, 255, 0.81);
+  background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(6, 21, 255, 0.3));
 }
 body .code .back {
-  background-color: rgba(47, 181, 255, 0.3);
+  background-color: rgba(6, 21, 255, 0.3);
 }
 body .photo .front {
-  background: rgba(0, 255, 109, 0.81);
+  background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(0, 255, 38, 0.3));
 }
 body .photo .back {
-  background-color: rgba(0, 255, 109, 0.3);
+  background-color: rgba(0, 255, 38, 0.3);
 }
 body .about .front {
-  background: rgba(142, 139, 144, 0.81);
+  background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(255, 247, 0, 0.3));
 }
 body .about .back {
-  background-color: rgba(142, 139, 144, 0.3);
+  background-color: rgba(255, 251, 0, 0.3);
 }
 body footer {
   position: static;
   text-align: center;
   color: white;
-  bottom: 20px;
+  bottom: 30px;
+  background: radial-gradient(circle at center, rgba(145, 145, 145, 0.8), rgba(124, 124, 124, 0));
+  padding: 10px;
 }
 body canvas {
   position: absolute;
@@ -164,25 +169,27 @@ body canvas {
   width: 100%;
   min-height: 100%;
   z-index: -200;
+  display: none;
 }
 
 @media screen and (min-width: 840px) {
   html {
     overflow: hidden;
   }
-  html body {
-    padding: 1%;
-  }
   html body header h1 {
     left: 115px;
     text-align: left;
+    color: #ffffff;
+    background: linear-gradient(to right, rgba(145, 145, 145, 0.8), rgba(124, 124, 124, 0) 50%);
   }
   html body .container {
     width: 50%;
-    margin: 1% auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 2fr 1fr;
+    background: radial-gradient(ellipse at center, rgba(197, 197, 197, 0.8), rgba(197, 197, 197, 0));
+    padding: 0px 80px 0px 80px;
   }
   html body .container .code, html body .container .photo {
     height: 500px;
@@ -193,9 +200,24 @@ body canvas {
   html body .container .about {
     grid-column: span 2;
   }
+  html body .container .code .front {
+    background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(6, 21, 255, 0.3));
+  }
+  html body .container .photo .front {
+    background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(0, 255, 38, 0.3));
+  }
+  html body .container .about .front {
+    background: radial-gradient(circle at top center, rgba(0, 0, 0, 0.8), rgba(255, 247, 0, 0.4), rgba(255, 247, 0, 0.3));
+  }
   html body footer {
     right: 115px;
     text-align: right;
+    color: #ffffff;
+    background: linear-gradient(to left, rgba(145, 145, 145, 0.8), rgba(124, 124, 124, 0) 50%);
+    padding: 10px 30px;
+  }
+  html body canvas {
+    display: unset;
   }
 }
 

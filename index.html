@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 
@@ -121,13 +120,13 @@
   </footer>
 
   <script src="js/pixi.min.js"></script>
-  <script>
+  <script class="bg-script">
     var app;
     function initPixi() {
       app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
       document.body.appendChild(app.view);
 
-      var image = new PIXI.Sprite.from("img/coding.png");
+      var image = new PIXI.Sprite.from("img/blockchain-4097126_1920.png");
       image.width = window.innerWidth;
       image.height = window.innerHeight;
       app.stage.addChild(image);
