@@ -37,8 +37,9 @@
 }
 html {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
   background-image: url("../img/blockchain-4097126_1920.png");
+  background-size: cover;
+  width: 100vw;
 }
 
 body {
