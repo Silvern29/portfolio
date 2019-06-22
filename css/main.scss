@@ -84,6 +84,11 @@ body {
       -moz-transform-style: preserve-3d;
       -ms-transform-style: preserve-3d;
       transform-style: preserve-3d;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
 
       .front,.back {
         display: flex;
@@ -143,11 +148,6 @@ body {
       -ms-transform: rotateX(180deg);
       -o-transform: rotateX(180deg);
       transform: rotateX(180deg);
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -ms-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
       -moz-backface-visibility: hidden;
     }
   }
