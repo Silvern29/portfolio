@@ -40,9 +40,9 @@
 
 html {
   font-family: "Montserrat", sans-serif;
-  background: url("../img/blockchain-4097126_1920.png") no-repeat;
+  background: url("../img/blockchain-4097126_1920_klein.jpg") no-repeat;
   background-size: cover;
-  width: 100vw;
+  //width: 100vw;
 }
 
 
@@ -52,7 +52,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 80vh;
+  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
 
   header {
     h1 {
@@ -84,11 +85,11 @@ body {
       -moz-transform-style: preserve-3d;
       -ms-transform-style: preserve-3d;
       transform-style: preserve-3d;
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -ms-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
 
       .front,.back {
         display: flex;
@@ -121,7 +122,7 @@ body {
         a {
           text-transform: uppercase;
           color: white;
-          font-size: 25px;
+          font-size: 1.56rem;
           font-weight: bold;
           padding: 5px;
           img {
@@ -134,7 +135,7 @@ body {
         font-family: 'Inika', sans-serif;
         text-transform: uppercase;
         color: white;
-        font-size: 30px;
+        font-size: 1.875rem;
 
         h2 {
           text-align: center;

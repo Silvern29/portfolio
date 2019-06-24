@@ -66,7 +66,7 @@
           <h2>Photo Design</h2>
         </div>
         <div class="back">
-          <a href="#">References</a>
+          <a href="https://photo.redlinghaus.at">References</a>
           <div class="logos">
             <span title="500px">
               <a href="https://500px.com/haushimmelreich" target="_blank"><img src="img/500px.png" alt="500px" width="70" height="70" /></a>
@@ -92,7 +92,7 @@
           <h2>About Me</h2>
         </div>
         <div class="back">
-          <a href="#">Bio & Hiring</a>
+          <a href="https://about.redlinghaus.at">Bio & Hiring</a>
           <div class="logos">
             <span title="Haus Himmelreich">
               <a href="https://www.himmelreich-kleinwalsertal.at/" target="_blank"><img src="img/himmel.jpg" alt="Haus Himmelreich" width="70" height="70" /></a>
@@ -121,48 +121,45 @@
 
   <script src="js/pixi.min.js"></script>
   <script class="bg-script">
-    var app;
-    function initPixi() {
-      app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
-      document.body.appendChild(app.view);
-
-      var image = new PIXI.Sprite.from("img/blockchain-4097126_1920_klein.jpg");
-      image.width = window.innerWidth;
-      image.height = window.innerHeight;
-      app.stage.addChild(image);
-
-      displacementSprite = new PIXI.Sprite.from("img/clouds.jpg");
-      displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-      displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-      app.stage.addChild(displacementSprite);
-      app.stage.filters = [displacementFilter];
-
-      app.renderer.view.style.transform = 'scale(1.02)';
-      displacementSprite.scale.x = 4;
-      displacementSprite.scale.y = 4;
-
-      animate();
-    }
-
-    function animate() {
-      displacementSprite.x += 8;
-      displacementSprite.y += 3;
-      requestAnimationFrame(animate);
-    }
-    initPixi();
+    // var app;
+    // function initPixi() {
+    //   app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+    //   document.body.appendChild(app.view);
+    //
+    //   var image = new PIXI.Sprite.from("img/blockchain-4097126_1920_klein.jpg");
+    //   image.width = window.innerWidth;
+    //   image.height = window.innerHeight;
+    //   app.stage.addChild(image);
+    //
+    //   displacementSprite = new PIXI.Sprite.from("img/clouds.jpg");
+    //   displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+    //   displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+    //   app.stage.addChild(displacementSprite);
+    //   app.stage.filters = [displacementFilter];
+    //
+    //   app.renderer.view.style.transform = 'scale(1.02)';
+    //   displacementSprite.scale.x = 4;
+    //   displacementSprite.scale.y = 4;
+    //
+    //   animate();
+    // }
+    //
+    // function animate() {
+    //   displacementSprite.x += 8;
+    //   displacementSprite.y += 3;
+    //   requestAnimationFrame(animate);
+    // }
+    // initPixi();
   </script>
   <script>
-    window.onresize = function() {
-      var myUrl = window.location;
-      window.location.replace(myUrl)
-    }
+
   </script>
 
 <!--  <script src="js/vendor/modernizr-3.7.1.min.js"></script>-->
 <!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
 <!--  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>-->
-<!--  <script src="js/plugins.js"></script>-->
-<!--  <script src="js/main.js"></script>-->
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
