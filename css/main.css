@@ -47,8 +47,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80vh;
-  height: calc(var(--vh, 1vh) * 80);
+  min-height: 80vh;
+  min-height: calc(var(--vh, 1vh) * 80);
 }
 body header h1 {
   position: relative;
